@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  tasks:
+
+    - name: Uninstalling VIM  
+
+      command: "{{ item }}"
+
+      with_items :
+
+       - yum remove vim -y
